@@ -1,0 +1,3 @@
+const CANVAS_WIDTH = 877;
+const CANVAS_HEIGHT = 620;
+export { CANVAS_WIDTH, CANVAS_HEIGHT };

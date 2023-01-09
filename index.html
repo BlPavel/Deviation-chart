@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Devation chart</title>
+</head>
+<body>
+    <main>
+        <form class="form">
+            <h2>Заполните поля</h2>
+            <form action="#" class="form">
+                <div class="form__input">
+                    <label for="course">Количество поясов</label>
+                    <input type="number" step="1" name="course" class="form-input" data-input-form>
+                </div>
+                <div class="form__input">
+                    <label for="generatrix">Количество образующих</label>
+                    <input type="number" step="1" name="generatrix" class="form-input" data-input-form>
+                </div>
+                <div class="form__input">
+                    <label for="volume">Объем резервуара</label>
+                    <input type="number" step="1" name="volume" class="form-input" data-input-form>
+                </div>
+                <div class="form__input">
+                    <label for="year">Год ввода в эксплуатацию</label>
+                    <input type="number" step="1" name="year" class="form-input" data-input-form>
+                </div>
+                <div class="form__input">
+                    <label for="name">Название резервуара</label>
+                    <input type="text" name="name" class="form-input input-text" data-input-form>
+                </div>
+                <button data-create-table type="button">Сформировать таблицу</button>
+            </form class="form-table">
+                <div class="table">
+                </div>
+            <div class="form-table__select">
+                <label for="generatrix-in-page">Количество образующих на странице</label>
+                <select name="generatrix-in-page" id="generatrix-in-page">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="form-table__button">
+                <button data-create-chart type="button">Рассчитать графики</button>
+                <button data-save>Сохранить</button>
+            </div>
+        </form>
+        <div class="generatrix"></div>
+    </main>
+
+    <template id="canvas-template">
+        <div class="canvas">
+            <canvas class="draw-canvas"></canvas>
+        </div>
+    </template>
+    <script type="module" src="/js/dom/clicking-arrow.js"></script>
+    <script type="module" src="/js/dom/render-table.js"></script>
+    <script type="module" src="/js/store/dataCanvas.js"></script>
+    <script type="module" src="/js/store/dataBasicLine.js"></script>
+    <script type="module" src="/js/store/dataChart.js"></script>
+    <script type="module" src="/js/draw/drawElement.js"></script>
+    <script type="module" src="/js/draw/drawBasicLine.js"></script>
+    <script type="module" src="/js/draw/drawChart.js"></script>
+    <script type="module" src="/js/chart/chart.js"></script>
+    <script type="module" src="/js/chart/table2excel.js"></script>
+    <script>
+        function saveTableInExcel(){
+            let table2excel = new Table2Excel();
+            table2excel.export(document.getElementsByClassName('table-for-save'));
+    }
+    </script>
+    <script type="module" src="/js/chart/save.js"></script>
+</body>
+</html>

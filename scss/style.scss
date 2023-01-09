@@ -1,0 +1,111 @@
+@import "_null.scss";
+main{
+    margin: 10px auto 30px;
+}
+h2{
+    font-size: 18px;
+}
+button{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: .7;
+    font-size: 14px;
+    &:hover{
+        opacity: 1;
+    }
+}
+input{
+    width: 40px;
+    font-size: 12px;
+    // border-bottom: 1px solid black; 
+    // &:hover,
+    // &:focus{
+    //     border-bottom: 1px solid blue;  
+    // }
+}
+label{
+    font-size: 14px;
+}
+.canvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    &__input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; 
+    }
+    .input-text{
+        width: 160px;
+    }
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    min-width: 500px;
+}
+.input-data{
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+.form-input{
+    border-bottom: 1px solid black
+}
+table{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: serif;
+    margin: 0 auto 1rem; 
+    td{
+        border: 1px solid black;
+        margin-bottom: 12px;
+        border: 1px solid black;
+        padding: .5rem;
+        text-align: center;
+        max-width: 140px;
+    }
+    .big-font{
+        font-size: 14px;
+    }
+}
+.form-table{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    &__select{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-bottom: 20px;
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        gap: 10px;  
+    }
+}
+
+.bold{
+    font-weight: 700;
+}
